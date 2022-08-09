@@ -34,7 +34,7 @@ function getSidebar() {
         { text: '列表过渡动画', link: '/vue3/列表过渡动画' },
         { text: '生命周期', link: '/vue3/生命周期' },
         { text: '数据监听', link: '/vue3/数据监听' },
-        { text: '提取响应式数据属性', link: '/vue3/提取响应式数据属性' },
+        { text: '提取响应式对象属性', link: '/vue3/提取响应式对象属性' },
         { text: '问题合集', link: '/vue3/问题合集' },
         { text: '响应式数据处理', link: '/vue3/响应式数据处理' },
         { text: '与vue2比较', link: '/vue3/与vue2比较' },
@@ -52,11 +52,11 @@ function getSidebar() {
       text: 'git',
       collapsible: true,
       items: [
-        { text: '版本号', link: '/vue3/版本号' },
-        { text: '版本回退', link: '/vue3/版本回退' },
-        { text: '故障分支', link: '/vue3/故障分支' },
-        { text: '合并分支', link: '/vue3/合并分支' },
-        { text: 'stash', link: '/vue3/stash' },
+        { text: '版本号', link: '/git/版本号' },
+        { text: '版本回退', link: '/git/版本回退' },
+        { text: '故障分支', link: '/git/故障分支' },
+        { text: '合并分支', link: '/git/合并分支' },
+        { text: 'stash', link: '/git/stash' },
       ]
     }
   ]
