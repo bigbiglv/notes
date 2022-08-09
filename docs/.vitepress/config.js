@@ -23,7 +23,7 @@ function getSidebar() {
       text:'markdown',
       collapsible: true,
       items:[
-        { text: '基本语法', link: '/markdown/基本语法' },
+        { text: '基本语法', link: '/markdown/基本语法' }, 
       ]
     },
     {
