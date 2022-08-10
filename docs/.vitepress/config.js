@@ -20,32 +20,64 @@ function getNav(){
 function getSidebar() {
   return [
     {
-      text:'markdown',
-      collapsible: true,
-      items:[
-        { text: '基本语法', link: '/markdown/基本语法' }, 
-      ]
-    },
-    {
       text: 'vue3',
       collapsible: true,
       items: [
-        { text: '计算属性', link: '/vue3/计算属性' },
-        { text: '列表过渡动画', link: '/vue3/列表过渡动画' },
-        { text: '生命周期', link: '/vue3/生命周期' },
-        { text: '数据监听', link: '/vue3/数据监听' },
-        { text: '提取响应式对象属性', link: '/vue3/提取响应式对象属性' },
-        { text: '问题合集', link: '/vue3/问题合集' },
-        { text: '响应式数据处理', link: '/vue3/响应式数据处理' },
-        { text: '与vue2比较', link: '/vue3/与vue2比较' },
-        { text: '自定义hooks', link: '/vue3/自定义hooks' },
-        { text: '自定义ref', link: '/vue3/自定义ref' },
         { text: '组合式api和选项式api', link: '/vue3/组合式api和选项式api' },
         { text: '组件传参', link: '/vue3/组件传参' },
-        { text: '组件异步引入', link: '/vue3/组件异步引入' },
         { text: 'ref和reactive原理', link: '/vue3/ref和reactive原理' },
+        { text: '计算属性', link: '/vue3/计算属性' },
+        { text: '生命周期', link: '/vue3/生命周期' },
+        { text: '数据监听', link: '/vue3/数据监听' },
+        { text: '自定义hooks', link: '/vue3/自定义hooks' },
+        { text: '自定义ref', link: '/vue3/自定义ref' },
+        { text: '响应式数据处理', link: '/vue3/响应式数据处理' },
+        { text: '提取响应式对象属性', link: '/vue3/提取响应式对象属性' },
+        { text: '组件异步引入', link: '/vue3/组件异步引入' },
+        { text: '列表过渡动画', link: '/vue3/列表过渡动画' },
         { text: 'teleport', link: '/vue3/teleport' },
         { text: 'vue-router@4', link: '/vue3/vue-router@4' },
+        { text: '与vue2比较', link: '/vue3/与vue2比较' },
+        { text: '问题合集', link: '/vue3/问题合集' },
+      ]
+    },
+    {
+      text: 'typesctip',
+      collapsible: true,
+      items: [
+        { text: '基础配置'ink: '/typesctip/基础配置' },
+        { text: '类型别名type', link: '/typesctip/类型别名type' },
+        { text: '联合类型', link: '/typesctip/联合类型' },
+        { text: '类型推断', link: '/typesctip/类型推断' },
+        { text: '接口inteface', link: '/typesctip/接口inteface' },
+        { text: '声明类型', link: '/typesctip/声明类型' },
+        { text: 'class', link: '/typesctip/class' },
+        { text: 'tsconfig.json', link: '/typesctip/tsconfig.json' },
+      ]
+    },
+    {
+      text: 'pinia',
+      collapsible: true,
+      items: [
+        { text: '安装'ink: '/pinia/安装' },
+        { text: 'state', link: '/pinia/state' },
+        { text: 'actions', link: '/pinia/actions' },
+        { text: 'getter', link: '/pinia/getter' },
+        { text: '修改、重置和监听', link: '/pinia/修改、重置和监听' },
+        { text: '数据响应式', link: '/pinia/数据响应式' },
+      ]
+    },
+    {
+      text: 'svelte',
+      collapsible: true,
+      items: [
+        { text: '基本语法', link: '/svelte/基本语法' },
+        { text: '组件传参', link: '/svelte/组件传参' },
+        { text: '数据响应式', link: '/svelte/数据响应式' },
+        { text: '双向绑定', link: '/svelte/双向绑定' },
+        { text: '计算属性', link: '/svelte/计算属性' },
+        { text: '数据监听', link: '/svelte/数据监听' },
+        { text: '富文本'ink: '/svelte/富文本' },
       ]
     },
     {
@@ -57,6 +89,22 @@ function getSidebar() {
         { text: '故障分支', link: '/git/故障分支' },
         { text: '合并分支', link: '/git/合并分支' },
         { text: 'stash', link: '/git/stash' },
+      ]
+    },
+    {
+      text: 'npm',
+      collapsible: true,
+      items: [
+        { text: '安装和卸载', link: '/npm/安装和卸载' },
+        { text: '发布和删除', link: '/npm/发布和删除' },
+        { text: 'pageage.json', link: '/npm/pageage.json' },
+      ]
+    },
+    {
+      text:'markdown',
+      collapsible: true,
+      items:[
+        { text: '基本语法', link: '/markdown/基本语法' }, 
       ]
     }
   ]
