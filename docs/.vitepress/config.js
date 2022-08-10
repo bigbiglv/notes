@@ -97,7 +97,7 @@ function getSidebar() {
       items: [
         { text: '安装和卸载', link: '/npm/安装和卸载' },
         { text: '发布和删除', link: '/npm/发布和删除' },
-        { text: 'pageage.json', link: '/npm/pageage.json' },
+        { text: 'pageage.json', link: '/npm/package.json' },
       ]
     },
     {
