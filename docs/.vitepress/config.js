@@ -52,7 +52,7 @@ function getSidebar() {
         { text: '接口inteface', link: '/typesctip/接口inteface' },
         { text: '声明类型', link: '/typesctip/声明类型' },
         { text: 'class', link: '/typesctip/class' },
-        { text: 'tsconfig.json', link: '/typesctip/tsconfig.json' },
+        { text: 'tsconfigJson', link: '/typesctip/tsconfigJson' },
       ]
     },
     {
@@ -97,7 +97,7 @@ function getSidebar() {
       items: [
         { text: '安装和卸载', link: '/npm/安装和卸载' },
         { text: '发布和删除', link: '/npm/发布和删除' },
-        { text: 'pageage.json', link: '/npm/package.json' },
+        { text: 'pageageJson', link: '/npm/packageJson' },
       ]
     },
     {
