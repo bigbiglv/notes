@@ -3,6 +3,7 @@
   lastUpdated: true, //最近更新時間
   themeConfig: {
     lastUpdatedText: '更新时间', // 最近更新時間文字
+    logo: '/logo.png',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/bigbiglv' }
     ],
