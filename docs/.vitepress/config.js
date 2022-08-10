@@ -1,6 +1,8 @@
   export default {
   title:'BBK',
+  lastUpdated: true, //最近更新時間
   themeConfig: {
+    lastUpdatedText: '更新时间', // 最近更新時間文字
     socialLinks: [
       { icon: 'github', link: 'https://github.com/bigbiglv' }
     ],
@@ -22,6 +24,7 @@ function getSidebar() {
     {
       text: 'vue3',
       collapsible: true,
+      collapsed: true,
       items: [
         { text: '组合式api和选项式api', link: '/vue3/组合式api和选项式api' },
         { text: '组件传参', link: '/vue3/组件传参' },
@@ -42,22 +45,24 @@ function getSidebar() {
       ]
     },
     {
-      text: 'typesctipt',
+      text: 'typescript',
       collapsible: true,
+      collapsed: true,
       items: [
-        { text: '基础配置', link: '/typesctipt/基础配置' },
-        { text: '类型别名type', link: '/typesctipt/类型别名type' },
-        { text: '联合类型', link: '/typesctipt/联合类型' },
-        { text: '类型推断', link: '/typesctipt/类型推断' },
-        { text: '接口inteface', link: '/typesctipt/接口inteface' },
-        { text: '声明类型', link: '/typesctipt/声明类型' },
-        { text: 'class', link: '/typesctipt/class' },
-        { text: 'tsconfigJson', link: '/typesctipt/tsconfigJson' },
+        { text: '基础配置', link: '/typescript/基础配置' },
+        { text: '类型别名type', link: '/typescript/类型别名type' },
+        { text: '联合类型', link: '/typescript/联合类型' },
+        { text: '类型推断', link: '/typescript/类型推断' },
+        { text: '接口inteface', link: '/typescript/接口inteface' },
+        { text: '声明类型', link: '/typescript/声明类型' },
+        { text: 'class', link: '/typescript/class' },
+        { text: 'tsconfig.json', link: '/typescript/tsconfig.json' },
       ]
     },
     {
       text: 'pinia',
       collapsible: true,
+      collapsed: true,
       items: [
         { text: '安装', link: '/pinia/安装' },
         { text: 'state', link: '/pinia/state' },
@@ -70,6 +75,7 @@ function getSidebar() {
     {
       text: 'svelte',
       collapsible: true,
+      collapsed: true,
       items: [
         { text: '基本语法', link: '/svelte/基本语法' },
         { text: '组件传参', link: '/svelte/组件传参' },
@@ -83,6 +89,7 @@ function getSidebar() {
     {
       text: 'git',
       collapsible: true,
+      collapsed: true,
       items: [
         { text: '版本号', link: '/git/版本号' },
         { text: '版本回退', link: '/git/版本回退' },
@@ -94,15 +101,17 @@ function getSidebar() {
     {
       text: 'npm',
       collapsible: true,
+      collapsed: true,
       items: [
         { text: '安装和卸载', link: '/npm/安装和卸载' },
         { text: '发布和删除', link: '/npm/发布和删除' },
-        { text: 'pageageJson', link: '/npm/packageJson' },
+        { text: 'pageage.json', link: '/npm/package.json' },
       ]
     },
     {
       text:'markdown',
       collapsible: true,
+      collapsed: true,
       items:[
         { text: '基本语法', link: '/markdown/基本语法' }, 
       ]
