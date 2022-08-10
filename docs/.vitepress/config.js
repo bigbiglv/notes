@@ -22,7 +22,7 @@ function getNav(){
 function getSidebar() {
   return [
     {
-      text: 'vue3',
+      text: 'vue3', 
       collapsible: true,
       collapsed: true,
       items: [
