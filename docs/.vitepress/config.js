@@ -42,17 +42,17 @@ function getSidebar() {
       ]
     },
     {
-      text: 'typesctip',
+      text: 'typesctipt',
       collapsible: true,
       items: [
-        { text: '基础配置', link: '/typesctip/基础配置' },
-        { text: '类型别名type', link: '/typesctip/类型别名type' },
-        { text: '联合类型', link: '/typesctip/联合类型' },
-        { text: '类型推断', link: '/typesctip/类型推断' },
-        { text: '接口inteface', link: '/typesctip/接口inteface' },
-        { text: '声明类型', link: '/typesctip/声明类型' },
-        { text: 'class', link: '/typesctip/class' },
-        { text: 'tsconfigJson', link: '/typesctip/tsconfigJson' },
+        { text: '基础配置', link: '/typesctipt/基础配置' },
+        { text: '类型别名type', link: '/typesctipt/类型别名type' },
+        { text: '联合类型', link: '/typesctipt/联合类型' },
+        { text: '类型推断', link: '/typesctipt/类型推断' },
+        { text: '接口inteface', link: '/typesctipt/接口inteface' },
+        { text: '声明类型', link: '/typesctipt/声明类型' },
+        { text: 'class', link: '/typesctipt/class' },
+        { text: 'tsconfigJson', link: '/typesctipt/tsconfigJson' },
       ]
     },
     {
