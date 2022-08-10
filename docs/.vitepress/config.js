@@ -1,4 +1,4 @@
-export default {
+  export default {
   title:'BBK',
   themeConfig: {
     socialLinks: [
@@ -45,7 +45,7 @@ function getSidebar() {
       text: 'typesctip',
       collapsible: true,
       items: [
-        { text: '基础配置'ink: '/typesctip/基础配置' },
+        { text: '基础配置', link: '/typesctip/基础配置' },
         { text: '类型别名type', link: '/typesctip/类型别名type' },
         { text: '联合类型', link: '/typesctip/联合类型' },
         { text: '类型推断', link: '/typesctip/类型推断' },
@@ -59,7 +59,7 @@ function getSidebar() {
       text: 'pinia',
       collapsible: true,
       items: [
-        { text: '安装'ink: '/pinia/安装' },
+        { text: '安装', link: '/pinia/安装' },
         { text: 'state', link: '/pinia/state' },
         { text: 'actions', link: '/pinia/actions' },
         { text: 'getter', link: '/pinia/getter' },
@@ -77,7 +77,7 @@ function getSidebar() {
         { text: '双向绑定', link: '/svelte/双向绑定' },
         { text: '计算属性', link: '/svelte/计算属性' },
         { text: '数据监听', link: '/svelte/数据监听' },
-        { text: '富文本'ink: '/svelte/富文本' },
+        { text: '富文本', link: '/svelte/富文本' },
       ]
     },
     {
