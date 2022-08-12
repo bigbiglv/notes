@@ -88,6 +88,21 @@
 		]
 	},
 	{
+		"text": "react",
+		"collapsible": true,
+		"collapsed": true,
+		"items": [
+			{
+				"text": "Props",
+				"link": "/react/Props.md"
+			},
+			{
+				"text": "虚拟Dom渲染",
+				"link": "/react/虚拟Dom渲染.md"
+			}
+		]
+	},
+	{
 		"text": "svelte",
 		"collapsible": true,
 		"collapsed": true,
@@ -162,6 +177,33 @@
 			{
 				"text": "联合类型",
 				"link": "/typescript/联合类型.md"
+			}
+		]
+	},
+	{
+		"text": "vite",
+		"collapsible": true,
+		"collapsed": true,
+		"items": [
+			{
+				"text": "scss和less",
+				"link": "/vite/scss和less.md"
+			},
+			{
+				"text": "接口代理",
+				"link": "/vite/接口代理.md"
+			},
+			{
+				"text": "资源导入",
+				"link": "/vite/资源导入.md"
+			},
+			{
+				"text": "路径别名",
+				"link": "/vite/路径别名.md"
+			},
+			{
+				"text": "问题合集",
+				"link": "/vite/问题合集.md"
 			}
 		]
 	},
