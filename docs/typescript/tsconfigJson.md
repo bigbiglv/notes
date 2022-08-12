@@ -1,6 +1,6 @@
-## 编译配置（tsconfig.json）
----
-### 生成tsconfig.json
+# 编译配置（tsconfig.json）
+
+## 生成tsconfig.json
 ```
 tsc --init
 ```
@@ -31,14 +31,15 @@ tsc --init
 `strictNullChecks`：是否严格检查`null`值（变量的值是否`null`）
 
 
-### 严格模式
+## 严格模式
 * 开启`strict`就不用开下面两个了
 ```json
 "strict": true,   //是否类型验证 
 "noImplicitAny":true,  //判断any类型
 "strictNullChecks":true   //undefined赋值string,null赋值number
 ```
-### 入口文件夹和输出文件夹
+
+## 入口文件夹和输出文件夹
 ```json
  /* Modules */
 "rootDir" : "./"  // 入口文件夹

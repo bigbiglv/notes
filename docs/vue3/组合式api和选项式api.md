@@ -1,12 +1,12 @@
-## 组合式`api`和选项式`api`
----
-### 组合式`api`
+# 组合式`api`和选项式`api`
+
+## 组合式`api`
 * 数据和方法不需要`return`出去
 * 组件只需要引入不需要声明
 * `defineProps`和`defineEmits`不需要手动引入
 
 ---
-### 选项式`api`
+## 选项式`api`
 * 代码都写在`setup()`函数里面
 * 最后把数据和方法`return`出去
 * `setup()`函数中不能使用`async`语法糖 因为最后要返回一个对象（异步组件和`suspense`可以返回`promise`）

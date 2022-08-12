@@ -1,6 +1,6 @@
-## getter
----
-### 使用
+# getter
+
+## 使用
 * 数据装饰等同于`computed`
 * 可以使用this访问整个`store`实例，但在`ts`中要指明数据类型
 ```ts
@@ -23,7 +23,7 @@ export default defineStore('mainStore',{
   }
 })
 ```
-### 将数据传递给`getter`
+## 将数据传递给`getter`
 * 在`getter`中返回一个函数来接收参数
 * 此时`getter`不再具备缓存
 ```ts
@@ -41,7 +41,7 @@ const isId = store.isId()
 //使用
 isId(10)
 ```
-### 使用其他`store`的`getter`
+## 使用其他`store`的`getter`
 * 引入其他的store直接使用
 ```ts
 import mian2Store from './mian2Store'

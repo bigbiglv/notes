@@ -1,6 +1,6 @@
-## `ref`和`reactive`的原理
----
-### `ref`
+# `ref`和`reactive`的原理
+
+## `ref`
 * 还是基于 `Object.defineproperty()`
 * 用来定义 `string` `number`等基础类型数据，使用时需要加上`.value` `xxx.value` `template`模板语法中不用
 * 也可以定义引用类型的数据，不过内部原理依旧会走`reactive`，取值还得加`.value` `obj.value.xxx`
@@ -31,7 +31,7 @@ console.log(obj.num) //11 走get() 返回num
 
 ---
 
-### `reactive`
+## `reactive`
 * 基于 `proxy`
 * 用来定义 `object` `array`等引用类型数据
 * 解决了`vue2`引用类型的数据新增，删除属性，数组通过下标修改数据视图不会更新。(`vue2`需要使用 `this.$set()`解决)

@@ -1,11 +1,11 @@
-## vue-router@4
----
-### 安装
+# vue-router@4
+
+## 安装
 ```
 npm i vue-router@4
 ```
 
-### 引入
+## 引入
 * 路由模式
   * `hash` 模式：`createWebHashHistory`
   * `history`模式：`createWebHistory`
@@ -51,7 +51,7 @@ app.use(router)
 app.mount('#app')
 ```
 
-### 编程式跳转
+## 编程式跳转
 * `push`，`replace`，`go`
 * 对应`window.history.pushState`,`window.history.replaceState` 和 `window.history.go`
 
@@ -89,9 +89,9 @@ router.push({ path: '/about', hash: '#team' })
   }
 ```
 
-## 路由守卫
+# 路由守卫
 
-### 全局前置守卫`beforeEach`
+## 全局前置守卫`beforeEach`
 * 路由跳转前触发
 * `to`：即将要去的路由
 * `from`：去之前的路由
@@ -109,7 +109,7 @@ router.beforeEach(async (to, from) => {
   }
  })
 ```
-### 全局解析守卫`beforeResolve`
+## 全局解析守卫`beforeResolve`
 * 路由跳转的时候触发
 ```ts
 router.beforeResolve(async to => {
@@ -129,7 +129,7 @@ router.beforeResolve(async to => {
 })
 ```
 
-### 单个路由守卫
+## 单个路由守卫
 * 只有进入路由的时候触发
 * `params`、`query` 或 `hash` 改变时不触发
 * 组合式`api`可以通过`onBeforeRouteUpdate` 和 `onBeforeRouteLeave` 分别添加 `update` 和 `leave` 守卫
@@ -167,7 +167,7 @@ const UserDetails = {
 }
 ```
 
-## 组合式`api`
+# 组合式`api`
 * 模板中可以直接访问 `$router` 和 `$route`
 
 引入
@@ -185,7 +185,7 @@ watch(
 ```
 
 
-## 滚动条`createRouter`
+# 滚动条`createRouter`
 ```ts
 const router = createRouter({
   history: createWebHashHistory(),
@@ -227,11 +227,11 @@ const router = createRouter({
 })
 ```
 
-## 动态路由
+# 动态路由
 * `router.addRoute()`：添加
 * `router.removeRoute()`：删除
 
-### 删除路由(所有的别名和子路由也会被同时删除)
+## 删除路由(所有的别名和子路由也会被同时删除)
 * 添加一个`name`相同的路由，会删除原来的
 ```ts
 router.addRoute({ path: '/about', name: 'about', component: About })// 这将会删除之前已经添加的路由，因为他们具有相同的名字且名字必须是唯一的
@@ -248,6 +248,6 @@ router.addRoute({ path: '/about', name: 'about', component: About })// 删除路
 router.removeRoute('about')
 ```
 
-### 查看路由
+## 查看路由
 * `router.hasRoute()`：检查路由是否存在。
 * `router.getRoutes()`：获取一个包含所有路由记录的数组

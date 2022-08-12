@@ -1,5 +1,5 @@
-## actions
----
+# actions
+
 * 同步异步都能使用
 * 不使用箭头函数（this指向问题）
 * 使用`this`获取`store`数据
@@ -23,7 +23,7 @@ export default defineStore('mainStore',{
   }
 })
 ```
-### 使用
+## 使用
 ```ts
 store.actionsAdd()
 ```

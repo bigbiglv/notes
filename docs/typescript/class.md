@@ -1,6 +1,6 @@
-## class
----
-### 属性
+# class
+
+## 属性
 * 静态属性 `static`
    * 实例不能访问静态方法，**只能通过类来访问**
 ```ts
@@ -18,7 +18,8 @@ class User{
   readonly age:number = 18
 }
 ```
-### 方法
+
+## 方法
 ```ts
 class User{
   name:string = "名字"
@@ -27,7 +28,8 @@ class User{
   }
 }
 ```
-### 构造函数 `constructor` 
+
+## 构造函数 `constructor` 
 * new实例的时候调用
 ```ts
 class User{
@@ -43,7 +45,8 @@ class User{
 let user1 = new User(10);
 console.log(user1)
 ```
-### 继承
+
+## 继承
 语法：子类 extends 父类
 * 子类会继承父类的所有方法和属性
 * 子类里面可以直接写自己的方法和属性，会覆盖父类的数据
@@ -116,7 +119,7 @@ class Class2 extends Class1{
 }
 ```
 
-### abstract（抽象类）
+## abstract（抽象类）
 * 禁止使用当前类创建对象
 * 抽象类中还能使用抽象方法，继承这个类的子类必须重写抽象方法
 ```ts
@@ -132,7 +135,7 @@ class User1 extends User{
 ```
 
 
-### private（私有属性）
+## private（私有属性）
 * 默认值public 
 * protected:当前类和他的子类可访问
 ```ts
