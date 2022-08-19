@@ -93,12 +93,40 @@
 		"collapsed": true,
 		"items": [
 			{
+				"text": "JSX语法",
+				"link": "/react/JSX语法.md"
+			},
+			{
 				"text": "Props",
 				"link": "/react/Props.md"
 			},
 			{
+				"text": "state和事件绑定",
+				"link": "/react/state和事件绑定.md"
+			},
+			{
+				"text": "事件处理",
+				"link": "/react/事件处理.md"
+			},
+			{
+				"text": "函数式和类式组件",
+				"link": "/react/函数式和类式组件.md"
+			},
+			{
+				"text": "生命周期",
+				"link": "/react/生命周期.md"
+			},
+			{
+				"text": "组件传参",
+				"link": "/react/组件传参.md"
+			},
+			{
 				"text": "虚拟Dom渲染",
 				"link": "/react/虚拟Dom渲染.md"
+			},
+			{
+				"text": "跨域代理",
+				"link": "/react/跨域代理.md"
 			}
 		]
 	},
