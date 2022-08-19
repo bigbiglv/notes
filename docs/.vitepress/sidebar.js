@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const NOTNOTEFILE = ['images','.vitepress',]
+const NOTNOTEFILE = ['images','.vitepress','index.md']
 
 /*
 * 根据路径获取文件列表
