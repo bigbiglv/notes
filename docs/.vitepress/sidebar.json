@@ -1,5 +1,32 @@
 [
 	{
+		"text": "axios",
+		"collapsible": true,
+		"collapsed": true,
+		"items": [
+			{
+				"text": "axios实例",
+				"link": "/axios/axios实例.md"
+			},
+			{
+				"text": "发送请求",
+				"link": "/axios/发送请求.md"
+			},
+			{
+				"text": "取消请求",
+				"link": "/axios/取消请求.md"
+			},
+			{
+				"text": "拦截器",
+				"link": "/axios/拦截器.md"
+			},
+			{
+				"text": "错误处理",
+				"link": "/axios/错误处理.md"
+			}
+		]
+	},
+	{
 		"text": "git",
 		"collapsible": true,
 		"collapsed": true,
@@ -240,6 +267,10 @@
 		"collapsible": true,
 		"collapsed": true,
 		"items": [
+			{
+				"text": "css",
+				"link": "/vue3/css.md"
+			},
 			{
 				"text": "ref和reactive原理",
 				"link": "/vue3/ref和reactive原理.md"
