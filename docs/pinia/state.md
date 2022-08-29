@@ -6,11 +6,11 @@
 ```ts
 import { defineStore } from 'pinia'
 export default defineStore('mainStore',{
-  state:()=>{
+  state:()=>({
     return {
       //自动推断类型
       count:10,
-    }
+    })
   }
 })
 ```

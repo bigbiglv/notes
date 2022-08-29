@@ -6,10 +6,10 @@
 ```ts
 import {defineStore} from 'pinia'
 export default defineStore('mainStore',{
-  state:()=>{
+  state:()=>({
     return {
       count:10
-    }
+    })
   },
   actions:{
     actionsAdd(){

@@ -6,10 +6,10 @@
 ```ts
 import { defineStore } from 'pinia'
 export default defineStore('mainStore',{
-  state:()=>{
+  state:()=>({
     return {
       count:10
-    }
+    })
   },
   getters:{
     // 箭头函数传入state参数 类型自动推断
