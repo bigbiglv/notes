@@ -1,4 +1,4 @@
-# git stash
+# `git stash`
 
 * 在分支A正常修改代码，突然分支B需要紧急修改但是不需要分支A的内容，此时可以使用`git stash`将分支A的修改保存起来
 
@@ -23,10 +23,12 @@
 需要切换到`branch_2`修改代码
 * 先在`branch_1`分支中保存代码，`git stash save 'xxx'`
 * `git checkout branch_2` 切换到`branch_2`分支
-* 在`branch_2`做出代码修改并push（此时两个分支都有自己的修改不和`main`同步）
+* 在`branch_2`做出代码修改完成后push（此时两个分支都有自己的修改不和`main`同步）
+* 将`branch_2`合并到`main`删除`branch_2`
+* 此时`branch_2`开发完成
 
 ## 切换回`branch_1`
 * `git checkout branch_1`
-* 此时`branch_1`只有本地修改没有commit的内容没有
-* 执行`git stash pop`恢复branch_1的所有修改并删除stash记录，本地没有`commit`的修改
+* 此时`branch_1`只有工作区修改不见了，`commit`暂存区的内容还有
+* 执行`git stash pop`恢复`branch_1`的所有修改并删除`stash`记录
 * 继续开发`branch_1`
