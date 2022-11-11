@@ -64,4 +64,4 @@ ssh -T git@gitlab_first -p xxxx
 
 # 克隆代码
 * 不能直接使用原本的`ssh`链接`clone`了
-* 将`ssh://@git@github.com:`中的`ssh://`后的内容`:`号前的内容替换位`config`中`Host`的值
+* 将`ssh://git@github.com:`中的`ssh://git@`后的内容`:`号前的内容替换位`config`中`Host`的值
