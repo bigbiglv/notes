@@ -1,13 +1,14 @@
 # `git stash`
 
-* 在分支A正常修改代码，突然分支B需要紧急修改但是不需要分支A的内容，此时可以使用`git stash`将分支A的修改保存起来
+* 在分支A正常修改代码，突然分支B需要紧急修改但是分支A工作区的内容还不想`commit`，此时可以使用`git stash`将分支A的工作区的修改保存起来
 
 ## 命令
+* `git stash`: 保存工作区内容
 * `git stash list` ：显示当前保存的内容
-* `git stash save` ：保存当前分支未commit的内容
-* `git stash pop` ：当前恢复并删除stash保存的内容到当前分支
-* `git stash apply` ：当前恢复单数不删除stash保存的内容到当前分支，当前有多个stash保存的内容可后面添加对应名称
-* `git stash drop <修改名>` ：删除指定stash保存的内容
+* `git stash save` ：保存当前分支未`commit`的内容
+* `git stash pop` ：恢复并删除`stash`保存的内容到当前分支
+* `git stash apply` ：恢复但不删除`stash`保存的内容到当前分支，当前有多个`stash`保存的内容可后面添加对应名称
+* `git stash drop <修改名>` ：删除指定`stash`保存的内容
 
 
 ## 准备
