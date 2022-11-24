@@ -4,11 +4,13 @@
 
 ## 命令
 * `git stash`: 保存工作区内容
+* `git stash save -u`: 保存添加新建的文件
 * `git stash list` ：显示当前保存的内容
-* `git stash save` ：保存当前分支未`commit`的内容
+* `git stash save 'msg'` ：保存当前分支未`commit`的内容, 区别于`git stash`能添加保存信息
 * `git stash pop` ：恢复并删除`stash`保存的内容到当前分支
 * `git stash apply` ：恢复但不删除`stash`保存的内容到当前分支，当前有多个`stash`保存的内容可后面添加对应名称
 * `git stash drop <修改名>` ：删除指定`stash`保存的内容
+
 
 
 ## 准备
