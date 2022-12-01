@@ -73,10 +73,26 @@ audioContext.decodeAudioData(arrayBuffer, (buffer)=>{
 })
 ```
 ### 音频源 `createBufferSource()`
-
+* 可用于播放`AudioBuffer`对象中包含的音频数据
+* 同样的音频只能播放一次，调用`start()`后要再次播放相同的声音，就必须创建一个新节点
+* 创建成本低，可以用完就丢，需要的时候再重新创建
+* `buffer`: 传入音频的`audioBuffer`
+* `start(when, offset, duration)`: 播放音频
+   * `when`: 开始播放时间
+   * `offset`: 偏移量
+   * `duration`: 持续时间
+* `stop()`：停止音频
+* `detune`: 振荡失谐
+* `playbackRate`: 速度 1为正常
+* `loop: Boolean`: 循环播放
+* `loopStart`: 开始循环时间
+* `loopEnd`: 停止循环时间
 ```js
 const source = audioContext.createBufferSource()
 source.buffer = AudioBuffer
+source.playbackRate.value = 1.5 // 1.5倍速
+source.start() // 播放音频
+source.stop() // 停止音频
 ```
 
 ## 节点
@@ -102,3 +118,5 @@ gainNode.gain.value = 10
 ```js
 const analyser = audioContext.AnalyserNode();
 ```
+
+### 混响 `createConvolver()`
