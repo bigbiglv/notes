@@ -95,6 +95,13 @@ source.start() // 播放音频
 source.stop() // 停止音频
 ```
 
+### 媒体元素音频源 `createMediaElementSource()`
+* 传入`audio`或者`video`元素
+```js
+const source = createMediaElementSource(audio)
+```
+
+
 ## 节点
 * 第一个为`createBufferSource`创建的音频源
 * 各个节点像链条一样通过`connect`连接，最后通过输出口`audioContext.destination`
