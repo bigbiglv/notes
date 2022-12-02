@@ -159,7 +159,7 @@ gainNode.gain.value = 10
 * 可用于公开音频时间和频率数据并创建数据可视化
 ```js
 const analyser = new AnalyserNode(audioContext, options)
-const analyser = audioContext.AnalyserNode();
+const analyser = audioContext.createAnalyser();
 ```
 
 ### 混响 `createConvolver()`
