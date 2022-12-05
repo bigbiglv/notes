@@ -16,7 +16,7 @@ const audioContext = new AudioContext(options)
 `sampleRate` `<Number>` | 采样率
 
 
-## 实例属性
+## `AudioContext` 实例属性
 
 ### 播放状态 `state`
 参数|说明
@@ -37,13 +37,8 @@ audioContext.onstatechange(()=>{
 audioContext.currentTime
 ```
 
-### 3D 音频空间化
-```js
-const listener = audioContext.listener
-```
 
-
-## 实例方法
+## `AudioContext` 实例方法
 
 ### 停止 `close()` `<Promise>`
 * 关闭音频释放资源停止播放，并非暂停且会**丢失进度** 
@@ -62,6 +57,7 @@ if (audioContext.state === 'running')
 
 ### 播放 `resume()` `<Promise>`
 * 恢复播放音频
+* 浏览器不允许一上来就使用播放音频，一开始需要手动触发调用一次 `audioContext.resume()`
 ```js
 // 先检查状态
 if (audioContext.state === 'running')
@@ -83,8 +79,8 @@ audioContext.decodeAudioData(arrayBuffer, (buffer)=>{
   source.buffer = buffer 
 })
 ```
-
-## 节点 `Web Audio API `
+---
+## 节点 `AudioNode`
 * 可以通过工厂函数或构造函数创建（推荐）
 * 第一个为音频源
 * 由音频源开始，各个节点像链条一样通过`connect`连接，最后连接输出口`audioContext.destination`
@@ -94,6 +90,22 @@ source.connect(NodeA)
 NodeA.connect(NodeB)
 NodeB.connect(Nodec)
 NodeC.connect(audioContext.destination)
+```
+
+### 连接节点 `connect`
+* 连接某个节点
+```js
+// 从音频源开始 destination结束
+source.connect(analyser)
+analyser.connect(gainNode)
+gainNode.connect(audioContext.destination)
+```
+
+### 断开节点 `disconnect()`
+* 断开某个节点
+```js
+// 断开音量模块
+audioContext.disconnect(gainNode)
 ```
 
 ### 音频缓冲区 `AudioBuffer`
@@ -109,7 +121,7 @@ const audioBuffer = audioContext.createBuffer(numOfChannels, length, sampleRate)
 
 ### 音频源 `AudioBufferSourceNode`
 * 可用于播放`AudioBuffer`对象中包含的音频数据，`AudioBuffer` 适用于**短音频**
-* 同样的音频只能播放一次，调用`start()`后要再次播放相同的声音，就必须创建一个新节点
+* 同样的音频只能播放一次，调用`start()`后要再次播放相同的声音，就**必须创建一个新节点**
 * 创建成本低，可以用完就丢，需要的时候再重新创建
 * `buffer` `<AudioBuffer>`: 传入音频的`audioBuffer`
 * `playbackRate` `<Number>`: 倍速
