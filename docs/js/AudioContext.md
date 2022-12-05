@@ -1,4 +1,4 @@
-# 音频上下文 `AudioContext`
+# 音频上下文 `Web Audio API`
 https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API
 * 使用构造函数创建一个`audioContext`对象, 音频上下文
 * 通过`audioContext`创建一个音频源`createBufferSource()`
@@ -6,6 +6,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API
 * 将`audioBuffer`赋值给音频源
 * 音频源通过`connect`连接其他节点，最后一个节点连接输出源`destination`
 * 谷歌浏览器单个标签最多六个音频上下文
+* 浏览器的自动播放策略通常要求显式权限或者用户与页面产生互动后，才允许脚本触发音频播放
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContexta
 const audioContext = new AudioContext(options)
@@ -149,12 +150,16 @@ source.stop() // 停止音频
 ### 媒体元素音频源 `MediaElementAudioSourceNode`
 * 适用于长音频流式播放
 * 传入`audio`或者`video`元素，从中操作音频
+* `audio`原本的功能不受影响，只是让`Web Audio API`能够访问到声音
 * 播放/暂停媒体仍然可以通过媒体元素 `API` 和播放器控件来完成
+* 如果音频来源是其他域的需要添加`crossorigin="anonymous"`
+   * `<audio src="xxx" controls crossorigin="anonymous"></audio>`
 ```js
 const audio = deocment.createElement('audio')
 const audioContext
 audio.addEventListener("play", () => {
   const source = new MediaElementAudioSourceNode(audioContext, { mediaElement: audio })
+  // 从 audio标签获取源并传到audioContect上下文钟
   const source = audioContext.createMediaElementSource(audio)
 })
 ```
