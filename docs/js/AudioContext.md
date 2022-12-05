@@ -133,7 +133,7 @@ source.stop() // 停止音频
 ```
 
 ### 媒体元素音频源 `MediaElementAudioSourceNode`
-* 适用于长音频
+* 适用于长音频流式播放
 * 传入`audio`或者`video`元素，从中操作音频
 * 播放/暂停媒体仍然可以通过媒体元素 `API` 和播放器控件来完成
 ```js
@@ -144,6 +144,9 @@ audio.addEventListener("play", () => {
   const source = audioContext.createMediaElementSource(audio)
 })
 ```
+
+### 麦克风音频源 `MediaStreamAudioSourceNode`
+
 
 ### 音量节点 `GainNode`
 * `new GainNode(audioContext<AudioContext>, options? => { gain: Number })`
