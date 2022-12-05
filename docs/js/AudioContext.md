@@ -1,4 +1,5 @@
 # 音频上下文 `AudioContext`
+https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API
 * 使用构造函数创建一个`audioContext`对象, 音频上下文
 * 通过`audioContext`创建一个音频源`createBufferSource()`
 * 通过`audioContext`创建各种节点
