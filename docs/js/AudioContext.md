@@ -158,11 +158,66 @@ const gainNode = audioContext.createGain();
 gainNode.gain.value = 10
 ```
 
-### 可视化 `AnalyserNode`
+### 频率可视化 `AnalyserNode`
 * 可用于公开音频时间和频率数据并创建数据可视化
+* 属性
+   * `frequencyBinCount`
+      * 可视化使用的数据值的数量
+      * `fftSize`的一半 
+      * 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192
+   * `fftSize`
+      * 可修改值用于限制可视化数组长度
+      * 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768。默认为2048
+* 获取频率
+   * `getByteFrequencyData(array)`
+      * 返回 0-255 的 `Uint8Array`(性能)
+      * 元素值 0 到 255 范围内的整数组成
+      * 对已有(传入)数组进行赋值， 不是返回新的数组
+   * `getFloatFrequencyData(array)`
+      * 返回 0-22050 的 `Float32Array`(精度)
+      * 数组长度是`frequencyBinCount`也就是`fftSize`的一半
 ```js
 const analyser = new AnalyserNode(audioContext, options)
 const analyser = audioContext.createAnalyser();
+// 规定长度为 512 限制柱体数量
+analyser.fftSize = 512;
+
+const bufferLength = analyser.frequencyBinCount;
+// 新建一个Uint8Array用于存放可视化数组
+const dataArray = new Uint8Array(bufferLength);
+
+// 获取canvas画布
+const canvas = decument.getElementById('canvas')
+const ctx = canvas.getContext('2d')
+// 获取画布宽高
+const width = canvas.width
+const height = canvas.height
+// 矩形柱体的宽高
+let barWidth = width / bufferLength * 1.5;
+let barHeight;
+// 绘画方法
+function draw() {
+  requestAnimationFrame(draw)
+  // 获取可视化数据 赋值给 dataArray
+  analyser.getByteFrequencyData(dataArray)
+  // 每次绘画前都先清除画布
+  ctx.clearRect(0, 0, WIDTH, HEIGHT)
+  // 循环绘制个数为 bufferLength 的矩形
+  for(var i = 0; i < bufferLength; i++) {
+    barHeight = dataArray[i]
+    // 绘制矩形 
+    // 矩形柱体随机色
+    let r = barHeight + 25 * (i / bufferLength);
+    let g = 250 * (i / bufferLength);
+    let b = 50;
+    ctx.fillStyle = `rgb(${r},${g},${b})`
+    // 前两个参数是矩形右上角的x y
+    // 后两个参数是矩形的宽高
+    ctx.fillRect(x, height - barHeight, barWidth, barHeight)
+  }
+}
+// 开始绘制
+draw()
 ```
 
 ### 混响 `createConvolver()`
