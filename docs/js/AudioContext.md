@@ -7,6 +7,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API
 * 音频源通过`connect`连接其他节点，最后一个节点连接输出源`destination`
 * 谷歌浏览器单个标签最多六个音频上下文
 ```js
+const AudioContext = window.AudioContext || window.webkitAudioContexta
 const audioContext = new AudioContext(options)
 ```
 * `options? => { latencyHint?, sampleRate? }`
