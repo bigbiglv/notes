@@ -31,9 +31,8 @@ defineEmits(['update:modelValue'])
 ```
 ### 也可以使用 `computed` 的 `get`和`set`
 ```html
-<input :modelValue="inputValue" > 
+<input :modelValue="value" > 
 ```
-
 ```js
 const props = defineProps(['modelValue'])
 const emit = defineEmits(['update:modelValue'])
