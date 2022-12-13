@@ -22,7 +22,7 @@
 <!-- 组件内 -->
 <input
   :modelValue="inputValue"
-  @update:modelValue="$emit('update:modelValue', $event.target.value)"
+  @input="$emit('update:modelValue', $event.target.value)"
 />
 ```
 ```js
